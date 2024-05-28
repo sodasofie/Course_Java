@@ -1,5 +1,6 @@
 package com.example.fitness;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,8 +11,7 @@ public class Application {
 
 		SpringApplication.run(Application.class, args);
 
-		System.out.println("help");
-
 	}
 
 }
+
