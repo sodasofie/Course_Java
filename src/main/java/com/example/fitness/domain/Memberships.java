@@ -1,6 +1,7 @@
 package com.example.fitness.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
 
 @Entity
@@ -9,7 +10,7 @@ public class Memberships {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     private String name;
     private String description;
     private Double price;
@@ -22,21 +23,20 @@ public class Memberships {
     public Memberships() {
     }
 
-    public Memberships(String name, String description, Double price, String start_date, String end_date, Users user) {
+    public Memberships(String name, String description, Double price, String start_date, String end_date) {
 
         this.name = name;
         this.description = description;
         this.price = price;
         this.start_date = start_date;
         this.end_date = end_date;
-        this.user = user;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
